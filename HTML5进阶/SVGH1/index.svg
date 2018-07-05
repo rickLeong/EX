@@ -1,0 +1,77 @@
+<svg width="950" height='400'   xmlns='http://www.w3.org/2000/svg'>
+  <style>
+    text{
+      text-anchor:middle;
+      dominant-baseline:middle;
+      fill:#6A737F;
+      font-size:12px;
+    }
+  </style>
+  <defs>
+    <rect x='0' y='0' style="fill:#dcfffe;stroke-width:2;stroke:#7cd9d8;" id='rect1' width='100' height='40' rx='25' ry='25' />
+    <rect x='0' y='0' style="fill:#dcfffe;stroke-width:2;stroke:#7cd9d8;" id='rect2' width='100' height='40' rx='10' ry='10' />
+  </defs>
+
+
+
+  <!-- 第一层 -->
+  <text x='455' y='95'>前端</text>
+  <use href='#rect2' x='503' y='80'/>
+  <text x='553' y='100'>JavaScript</text>
+  <use href='#rect2' x='653' y='80'/>
+  <text x='703' y='100'>TypeScript</text>
+  <use href='#rect2' x='803' y='80'/>
+  <text x='853' y='100'>Angular</text>
+
+  <!-- 中间层-->
+  <use href='#rect1' x='50' y='180'/>
+  <text x='100' y='200'>HTML</text>
+  <use href='#rect2' x='202' y='180'/>
+  <text x='252' y='200'>CSS</text>
+  <polygon points='404,170 454,200, 404,230 354,200' style="fill:#def2ff;stroke:#98b2e3;stroke-width:2"/>
+  <text x='404' y='200'>选择方向</text>
+  <use href='#rect2' x='503' y='180'/>
+  <text x='553' y='200'>JQuery</text>
+  <use href='#rect2' x='653' y='180'/>
+  <text x='703' y='200'>AngularJS</text>
+  <text x='479' y='195'>库/框架</text>
+
+  <!-- 第二层-->
+  <text x='455' y='295'>重构</text>
+  <use href='#rect2' x='503' y='280'/>
+  <text x='553' y='300'>HTML5</text>
+  <use href='#rect2' x='653' y='280'/>
+  <text x='703' y='300'>CSS3</text>
+  <use href='#rect2' x='803' y='280'/>
+  <text x='853' y='300'>SVG</text>
+
+  <!-- 圆圈 -->
+  <circle cx='853' cy='40' r='20' stroke='#2bbbb7' fill='none' storke-width='3'/>
+  <polygon points='845,30 861,30, 861,40 869,40 853,55 836,40 845,40' style="fill:#2bbbb7;stroke:#2bbbb7;"/>
+
+
+  <!-- 第一层路径  -->
+  <path d='M 404 170 L 404 150' stroke="#77cc4e" fill='none' stoke-width='3'/>
+  <path d='M 404 150 C 404 100 400 100 450 100' stroke="#77cc4e" fill='none' stoke-width='3'/>
+  <path d='M 450 100 L 500 100 L500 98 L502 100 L500 102 L500 100' stroke="#77cc4e" fill='#77cc4e' stoke-width='3'/>
+  <path d='M603 100 L651 100 L651 98 L653 100 L651 102 L651 100' stroke="#77cc4e" fill='#77cc4e' stoke-width='3'/>
+  <path d='M753 100 L801 100 L801 98 L803 100 L801 102 L801 100' stroke="#77cc4e" fill='#77cc4e' stoke-width='3'/>
+
+
+  <!--中间层路径-->
+  <path d='M150 200 L200 200 L200 198 L202 200 L200 202 L200 200' stroke="#77cc4e" fill='#77cc4e' stoke-width='3'/>
+  <path d='M302 200 L350 200 L350 198 L354 200 L350 202 L350 200' stroke="#77cc4e" fill='#77cc4e' stoke-width='3'/>
+  <path d='M454 200 L502 200 L502 198 L504 200 L502 202 L502 200' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+  <path d='M603 200 L651 200 L651 198 L653 200 L651 202 L651 200' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+  <path d='M753 200 L803 200' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+  <path d='M803 200 C853 200 853 200 853 150' stroke="#98b2e3" fill='none' stoke-width='3'/>
+  <path d='M853 150 L853 125 L851 125 L853 122 L855 125 L853 125' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+
+  <!-- 第二层路径 -->
+  <path d='M 404 230 L 404 250' stroke="#98b2e3" fill='none' stoke-width='3'/>
+  <path d='M 404 250 C 404 300 400 300 450 300' stroke="#98b2e3" fill='none' stoke-width='3'/>
+  <path d='M 450 300 L 500 300 L500 298 L502 300 L500 302 L500 300' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+  <path d='M603 300 L651 300 L651 298 L653 300 L651 302 L651 300' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+  <path d='M753 300 L801 300 L801 298 L803 300 L801 302 L801 300' stroke="#98b2e3" fill='#98b2e3' stoke-width='3'/>
+
+</svg>
