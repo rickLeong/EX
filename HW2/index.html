@@ -8,34 +8,166 @@
 <body>
 <!--頭部區域-->
     <header id="header">
-        <div class="logo"></div>
-        <nav class="nav">
+        <div class="logo fl"></div>
+        <nav class="nav fl">
             <ul>
-                <li class="nav_item"><a href="#">课程</a></li>
-                <li class="nav_item"><a href="#">职业路径</a></li>
-                <li class="nav_item"><a href="#">实战</a></li>
-                <li class="nav_item"><a href="#">猿问</a></li>
-                <li class="nav_item"><a href="#">手记</a></li>
+                <li class="nav_item fl"><a href="#">课程</a></li>
+                <li class="nav_item fl"><a href="#">职业路径</a></li>
+                <li class="nav_item fl"><a href="#">实战</a></li>
+                <li class="nav_item fl"><a href="#">猿问</a></li>
+                <li class="nav_item fl"><a href="#">手记</a></li>
             </ul>
         </nav>
-        <div id="header_rightArea">
-            <div class="search">
+        <div id="header_rightArea" class="fr">
+            <div class="search fl">
                 <input type="text">
                 <a href="#" class="searchBtn"></a>
                 <a href="#" class="searchTxt">前端入门</a>
             </div>
-            <ul class="tool">
-                <a href="#"><li class="cart"></li></a>
-                <a href="#"><li class="alarm"></li></a>
-                <a href="#"><li class="icon"></li></a>
+            <ul class="tool fr">
+                <a href="#" class="fl"><li class="cart"></li></a>
+                <a href="#" class="fl"><li class="alarm"></li></a>
+                <a href="#" class="fl"><li class="icon"></li></a>
             </ul>
         </div>
     </header>
-<!--baner區域-->
-    <div class="wrap">
-        <div class="banner"></div>
-        <div class="cart_menu">
 
+    <div class="wrap">
+        <!--baner區域-->
+        <div class="banner"></div>
+        <!--購物區區域-->
+        <div class="cart">
+            <div class="cart_menu">
+                <div class="title_row">
+                    <div class="product_selectAll fl">
+                        <input type="checkbox" class="selectAll">
+                        <span>全選</span>
+                    </div>
+                    <div class="product_name fl">
+                        <span>商品名稱</span>
+                    </div>
+                    <div class="product_total_price fl">
+                        <span>總價</span>
+                    </div>
+                    <div class="product_price fl">
+                        <span>單價</span>
+                    </div>
+                    <div class="product_quantity fl">
+                        <span>數量</span>
+                    </div>
+                    <div class="product_operation fl">
+                        <span>操作 </span>
+                    </div>
+                </div>
+                <div class="product_row">
+                    <div class="product_selectOne fl">
+                        <input type="checkbox" class="selectOne">
+                    </div>
+                    <div class="product_detail fl">
+                        <img src="img/g2.jpg" alt="前段小白成長記" class="fl">
+                        <span class="product_description" class="fl">前段小白成長記</span>
+                    </div>
+                    <div class="total_price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="quantity_box fl">
+                        <div class="quantity">
+                            <span class="decreaseBtn">－</span>
+                            <input type="text" value="1" class="quantity_input">
+                            <span class="increaseBtn">＋</span>
+                        </div>
+                    </div>
+                    <div class="operate fl">
+                        <span>刪除</span>
+                    </div>
+                </div>
+                <div class="product_row">
+                    <div class="product_selectOne fl">
+                        <input type="checkbox" class="selectOne">
+                    </div>
+                    <div class="product_detail fl">
+                        <img src="img/g1.jpg" alt="前段小白成長記" class="fl">
+                        <span class="product_description" class="fl">前段小白成長記</span>
+                    </div>
+                    <div class="total_price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="quantity_box fl">
+                        <div class="quantity">
+                            <span class="decreaseBtn">－</span>
+                            <input type="text" value="1" class="quantity_input">
+                            <span class="increaseBtn">＋</span>
+                        </div>
+                    </div>
+                    <div class="operate fl">
+                        <span>刪除</span>
+                    </div>
+                </div>
+                <div class="product_row">
+                    <div class="product_selectOne fl">
+                        <input type="checkbox" class="selectOne">
+                    </div>
+                    <div class="product_detail fl">
+                        <img src="img/g1.jpg" alt="前段小白成長記" class="fl">
+                        <span class="product_description" class="fl">前段小白成長記</span>
+                    </div>
+                    <div class="total_price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="quantity_box fl">
+                        <div class="quantity">
+                            <span class="decreaseBtn">－</span>
+                            <input type="text" value="1" class="quantity_input">
+                            <span class="increaseBtn">＋</span>
+                        </div>
+                    </div>
+                    <div class="operate fl">
+                        <span>刪除</span>
+                    </div>
+                </div>
+                <div class="product_row">
+                    <div class="product_selectOne fl">
+                        <input type="checkbox" class="selectOne">
+                    </div>
+                    <div class="product_detail fl">
+                        <img src="img/g1.jpg" alt="前段小白成長記" class="fl">
+                        <span class="product_description" class="fl">前段小白成長記</span>
+                    </div>
+                    <div class="total_price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="price fl">
+                        <span>￥396</span>
+                    </div>
+                    <div class="quantity_box fl">
+                        <div class="quantity">
+                            <span class="decreaseBtn">－</span>
+                            <input type="text" value="1" class="quantity_input">
+                            <span class="increaseBtn">＋</span>
+                        </div>
+                    </div>
+                    <div class="operate fl">
+                        <span>刪除</span>
+                    </div>
+                </div>
+            </div>
+            <!--結算區域-->
+            <div class="check_out">
+                <div class="fr">
+                    <span class="">應付金額:</span>
+                    <span class="check_out_price"><span class="money_sign">￥</span>1584</span>
+                    <button class="checkOutBtn">去結算</button>
+                </div>
+            </div>
         </div>
     </div>
 
