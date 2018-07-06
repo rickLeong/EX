@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/*頭部樣式*/
+#header {
+    height: 60px;
+    background-color:#010101;
+}
+
+#header .logo{
+    width:128px;
+    height: 40px;
+    float: left;
+    background-image:url("../img/logo.png");
+    margin-top: 10px;
+    margin-left:25px;
+}
+
+/*導航樣式*/
+#header .nav{
+    float: left;
+    color: #fff;
+    margin-left: 50px;
+}
+
+#header .nav .nav_item{
+    float: left;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding:0 25px;
+}
+#header .nav li:nth-child(2){
+    background: #363c41;
+    position: relative;
+}
+#header .nav li:nth-child(2)::after{
+    content:'';
+    display: block;
+    position: absolute;
+    background: url("../img/icon-new.png");
+    right: 10px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+}
+#header_rightArea{
+    float: right;
+    height: 60px;
+}
+
+#header_rightArea .tool{
+    float: right;
+    margin-right: 25px;
+    height: 60px;
+}
+/*搜索框樣式*/
+#header_rightArea .search{
+    float: left;
+    position:relative;
+    margin-top: 10px;
+    margin-right: 25px;
+
+}
+#header_rightArea .search input{
+    height: 40px;
+    width: 260px;
+    padding: 0 10px;
+    background-color: #010101;
+    border: none;
+    border-bottom:1px solid #616667;
+    color:#fff;
+
+}
+#header_rightArea .search .searchBtn{
+    display:block;
+    background: url("../img/icon-1-sprite_w22.png");
+    background-position: 0 0;
+    position: absolute;
+    right: 9px;
+    top:9px;
+    width: 22px;
+    height: 22px;
+}
+#header_rightArea .search .searchTxt{
+    text-align: center;
+    width: 72px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    background-color: #2c3439;
+    color: #616c71;
+    font-size: 12px;
+}
+
+/*右區圖標樣式*/
+.tool a{
+    height:60px;
+    display: block;
+    float: left;
+    padding: 0 25px;
+}
+.tool a:hover{
+    background-color: #363c41;
+}
+.tool .cart,
+.tool .alarm{
+    width: 22px;
+    height: 22px;
+    margin-top: 19px;
+}
+.tool .cart{
+    background: url("../img/shopcar.png") no-repeat;
+    background-position: 2px -213px;
+}
+
+.tool .alarm{
+    background: url("../img/icon-1-sprite_w22.png");
+    background-position: 0 -44px;
+}
+.tool .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background: url("../img/ava.jpg") no-repeat;
+    background-size: contain;
+}
+
+.wrap{
+    width: 100%;
+    position: relative;
+}
+/*banner區域*/
+.banner{
+    background:url("../img/cart-header-bg.jpg") repeat;
+    height: 160px;
+    z-index: 0;
+}
+
+.cart_menu{
+    height: 550px;
+    width: 1100px;
+    box-shadow: 0 0 5px 3px #dddddd;
+    position: absolute;
+    top:100px;
+    left: 50%;
+    margin-left: -550px;
+    z-index: 1;
+    background-color: #fff;
+}
