@@ -7,16 +7,15 @@
 
 <body style="width:2000px; height:1000px;">
     <div id="demo" style="position:absolute; left:518px; right:100px; width:500px; height:500px; background:#CC0000; top: 114px;">Demo为了方便就直接用绝对定位的元素</div>
+<button id="btn">alertBtn</button>
 </body>
 </html>
 <script>
 // 补充代码
-var num = 1;
-function printSome(){
-  console.log(num);
-  alert(123);
-}
-printSome();
+let btn = document.querySelector('#btn');
+(btn.onclick = function(){
+    alert('hello');
+})()
 </script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>購物車</title>
     <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
@@ -31,16 +31,16 @@
             </ul>
         </div>
     </header>
-
+<!--商品結算區域-->
     <div class="wrap">
         <!--baner區域-->
         <div class="banner"></div>
         <!--購物區區域-->
         <div class="cart">
             <div class="cart_menu">
-                <div class="title_row">
+                <div class="title_row" >
                     <div class="product_selectAll fl">
-                        <input type="checkbox" class="selectAll">
+                        <input type="checkbox" class="selectAll" checked>
                         <span>全選</span>
                     </div>
                     <div class="product_name fl">
@@ -68,10 +68,10 @@
                         <span class="product_description" class="fl">前段小白成長記</span>
                     </div>
                     <div class="total_price fl">
-                        <span>￥396</span>
+                        ￥<span class="total_price_num">396</span>
                     </div>
                     <div class="price fl">
-                        <span>￥396</span>
+                        ￥<span class="price_num">396</span>
                     </div>
                     <div class="quantity_box fl">
                         <div class="quantity">
@@ -93,10 +93,10 @@
                         <span class="product_description" class="fl">前段小白成長記</span>
                     </div>
                     <div class="total_price fl">
-                        <span>￥396</span>
+                        ￥<span class="total_price_num">396</span>
                     </div>
                     <div class="price fl">
-                        <span>￥396</span>
+                        ￥<span class="price_num">396</span>
                     </div>
                     <div class="quantity_box fl">
                         <div class="quantity">
@@ -118,10 +118,10 @@
                         <span class="product_description" class="fl">前段小白成長記</span>
                     </div>
                     <div class="total_price fl">
-                        <span>￥396</span>
+                        ￥<span class="total_price_num">396</span>
                     </div>
                     <div class="price fl">
-                        <span>￥396</span>
+                        ￥<span class="price_num">396</span>
                     </div>
                     <div class="quantity_box fl">
                         <div class="quantity">
@@ -143,10 +143,10 @@
                         <span class="product_description" class="fl">前段小白成長記</span>
                     </div>
                     <div class="total_price fl">
-                        <span>￥396</span>
+                        ￥<span class="total_price_num">396</span>
                     </div>
                     <div class="price fl">
-                        <span>￥396</span>
+                        ￥<span class="price_num">396</span>
                     </div>
                     <div class="quantity_box fl">
                         <div class="quantity">
@@ -164,12 +164,38 @@
             <div class="check_out">
                 <div class="fr">
                     <span class="">應付金額:</span>
-                    <span class="check_out_price"><span class="money_sign">￥</span>1584</span>
+                    <span class="check_out_price"><span class="money_sign">￥</span><span class="result">1584</span></span>
                     <button class="checkOutBtn">去結算</button>
                 </div>
             </div>
         </div>
     </div>
-
+<!--footer區域-->
+<footer id="footer">
+    <div class="content clearboth">
+        <div class="footer_link fl">
+            <ul class="clearboth">
+                <li><a href="#">網站首頁</a></li>
+                <li><a href="">企業合作</a></li>
+                <li><a href="">人才招聘</a></li>
+                <li><a href="">聯繫我們</a></li>
+                <li><a href="">講師招募</a></li>
+                <li><a href="">常見問題</a></li>
+                <li><a href="">意見反饋</a></li>
+                <li><a href="">慕課大學</a></li>
+                <li><a href="">友情鏈接</a></li>
+            </ul>
+            <p class="copyRight">Copyright &copy; 2017 imooc.com All Rights Reserved | 京ICP備 13046642號-2</p>
+        </div>
+        <div class="contact-icon fr">
+            <ul>
+                <a href="#"><li class="wx"></li></a>
+                <a href="#"><li class="wb"></li></a>
+                <a href="#"><li class="qq"></li></a>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="js/fn.js"></script>
 </body>
 </html>
