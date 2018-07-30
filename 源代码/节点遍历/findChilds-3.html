@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>查找子节点（三）</title>
+    <script src="domReady.js"></script>
+    <script>
+      myReady(function(){
+        var box = document.getElementById("box");
+        for(var i = 0, len = box.childElementCount; i < len; i++) {
+          console.log(box.children[i]);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="box">  
+      <li>节点一</li>
+      <li>节点二</li>
+      <li>节点三</li>  
+    </ul>
+  </body>
+</html>

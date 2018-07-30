@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+
+.content{
+    width:1200px;
+    margin: 0 auto;
+}
+
+#header {
+    width: 100%;
+    height: 120px;
+    background-color: #efefef;
+    border-bottom: 2px solid #2487e9;
+}
+
+#header .logo *{
+    float: left;
+}
+#header .logo img{
+    display: block;
+    margin-top: 5px;
+}
+#header .logo .title{
+    height: 30px;
+    margin:45px 0;
+    line-height: 30px;
+    font-size: 25px;
+    border-right: 4px solid #000;
+    padding-right: 10px;
+}
+
+#header .logo .subTitle{
+    height:20px;
+    line-height: 20px;
+    font-size: 18px;
+    color:#666;
+    margin:50px 10px;
+}
+
+
+#header .nav{
+    float: right;
+}
+
+#header .nav li{
+    float: left;
+    margin-right: 15px;
+    line-height: 25px;
+}
+
+
+#header .nav{
+    height:25px;
+    font-size:18px;
+    margin-top:50px;
+}
+
+#header .nav .login,
+#header .nav .register{
+    padding: 0 5px;
+}
+#header .nav .myImooc{
+    position:relative;
+    padding-right:20px;
+}
+
+#header .nav .myImooc::after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #000;
+    position: absolute;
+    right:0;
+    bottom: 0;
+}
+#header .nav .phone img{
+    width: 17px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#header .nav .phone{
+    padding-left: 25px;
+}
+
+
+#main{
+    margin-top: 80px;
+}
+
+#main p.position *{
+    font-size: 18px;
+    color: #666;
+}
+#main .position .positionText{
+    color: #000;
+}
+#form{
+    margin-top: 10px;
+    width: 1200px;
+    border: 1px solid #fb7403;
+    border-top: none;
+    border-radius: 5px;
+    padding-bottom: 80px
+}
+#form .formTitle{
+    background: #fb7403;
+    line-height: 45px;
+    color: #fff;
+    padding-left: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#regForm{
+  width: 1200px;
+  margin-top: 50px
+}
+
+.regFormInfo{
+  margin-bottom: 20px;
+}
+
+.regFormInfo .left{
+  width: 450px;
+  float: left;
+  text-align: right;
+}
+.regFormInfo .right{
+  width: 228px;
+  float: left;
+  margin:0 10px
+}
+#nameRule {
+  text-decoration: underline;
+}
+.pswLevel{
+  display: inline-block;
+  width: 40px;
+  height: 5px;
+  background-color: #ddd;
+  margin-bottom: 3px;
+}
+.level1{
+  background-color: #ff0000;
+}
+.level2{
+  background-color: #FFA500;
+}
+.level3{
+  background-color: #008000;
+}
+.regFormInfo input,
+.regFormInfo select{
+  width:228px;
+  padding: 3px;
+}
+.threeL{
+  padding:0 8px;
+}
+.twoL{
+  padding-left: 32px;
+}
+.rule{
+  margin-left: 502px;
+}
+.rule .ruleText{
+  color:#006ee1;
+}
+
+#submitBtn{
+  color: #fff;
+  display: block;
+  background-color: #fb7403;
+  width: 230px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 525px;
+  border: none;
+}
+
+
+
+#footer{
+  width: 100%;
+  min-height: 100px;
+  margin-top: 120px;
+  text-align: center;
+  background-color: #dcdcdc;
+  color: #a99999;
+  border-top: 2px solid #2487e9;
+  position: fixed;
+  bottom: 0;
+}
+#footer .footer{
+  margin: 0 auto;
+  min-width: 1200px;
+}
+#footer .about{
+  margin-top: 30px;
+}
+
+#footer .copyRight{
+  margin-top: 10px;
+}
+
+
+.orange {
+    color: #fb7403;
+
+}
+
+
+.cf::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.errorMsg{
+  color: red;
+}
+.successMsg{
+  color: #008000;
+}

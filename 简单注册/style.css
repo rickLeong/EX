@@ -1,0 +1,58 @@
+p{
+  margin: 0;
+  padding: 0;
+}
+#wrap{
+  width: 1000px;
+  margin: 10px auto;
+  background: #eee;
+  height: 600px;
+}
+
+#wrap .headBar{
+  height: 50px;
+  line-height: 50px;
+  background-color: #3092D1;
+  font-size: 15px;
+  color: #fff;
+  text-indent: 10px;
+}
+
+#wrap #form{
+  color:#888;
+
+}
+
+#wrap #form div {
+  margin: 25px 0;
+}
+#wrap #form .reginfo{
+  width: 400px;
+  text-align: right;
+}
+#wrap #form p {
+  display: inline-block;
+}
+#wrap #form .userInput{
+  margin: 0 20px;
+  width: 150px;
+}
+
+#submitBtn{
+  display: block;
+  margin:50px auto;
+  height: 40px;
+  width: 80px;
+  background-color: #2375BA;
+  color: #fff;
+  border-radius: 5px;
+  border:none;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.checkStyle{
+  color:red;
+  font-size: 14px;
+  margin-left: 5px;
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+ <title>正则表达式</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var str = '110报警120急救119火警114查询';
+var model = '\\d+';
+var model2 = '\\D+';
+pattern = new RegExp(model,'g');
+console.log(str.match(pattern))
+</script>
+</body>
+</html>

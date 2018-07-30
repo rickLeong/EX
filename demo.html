@@ -12,10 +12,23 @@
 </html>
 <script>
 // 补充代码
-let btn = document.querySelector('#btn');
-(btn.onclick = function(){
-    alert('hello');
-})()
+function Eq(){
+    this.a = "aaa";
+    Eq.getA = function(){ //静态的方法
+        alert("bbb");
+        alert(this.a);//undefined
+    };
+    Eq.prototype.getB = function(){  //非静态的方法
+        alert(this.a);
+    }
+}
+var eq = new Eq();
+// eq.getA();//TypeError: eq.getA is not a function
+Eq.getA();//bbb
+// eq.getB();//aaa
+// Eq.getB();//TypeError: Eq.getB is not a function
+
+f1()();
 </script>
 </body>
 </html>

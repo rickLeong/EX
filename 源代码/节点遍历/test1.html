@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>节点遍历</title>
+  <script src="domReady.js"></script>
+</head>
+<body>
+  <div>
+    <p>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+      <span>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+      </span>
+    </p>
+  </div>
+    <script>
+    // 此处补充代码
+    myReady(function(){
+      var str = '';
+      function travel(asterisk,node){
+          if(node.tagName){
+              str += asterisk + node.tagName + "<br>"
+          }
+          var l = node.childNodes.length;
+          for(var i=0;i<l;i++){
+              travel(asterisk+' * ', node.childNodes[i]);
+          }
+      }
+      travel('',document);
+      document.write(str);
+      console.log(document.body.childNodes);
+    })
+  </script>
+</body>
+</html>

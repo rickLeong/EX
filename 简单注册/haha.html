@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>js正则_注册表单验证作业</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background: #f5f5f5;
+}
+
+header {
+width: 100%;
+height: 50px;
+line-height: 50px;
+background: rgb(43, 88, 212);
+color: #fff;
+font-size: 24px;
+text-indent: 10px;
+}
+
+#form {
+margin: 30px auto;
+width: 500px;
+}
+
+.info {
+position: relative;
+display: inline-block;
+width: 150px;
+height: 40px;
+line-height: 40px;
+text-align: right;
+margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+width: 300px;
+height: 25px;
+outline: none;
+padding: 3px;
+font-size: 18px;
+}
+
+#sex {
+width: 70px;
+height: 25px;
+font-size: 16px;
+outline: none;
+}
+
+#submit {
+position: relative;
+left: 50%;
+margin-top: 50px;
+width: 80px;
+height: 50px;
+color: #fff;
+font-size: 20px;
+background: rgb(43, 88, 212);
+border-radius: 5px;
+cursor: pointer;
+outline: none;
+}
+
+.ok,
+.warn {
+width: 400px;
+text-align: left;
+position: absolute;
+top: 0;
+left: 480px;
+font-size: 12px;
+}
+
+.ok {
+color: green;
+}
+
+.warn {
+color: red;
+}
+</style>
+</head>
+
+<body>
+<!-- 头部 -->
+<header>用户注册</header>
+<!-- 注册表单区 -->
+<section>
+<div id="form">
+<span class="info">用户名：</span>
+<input type="text" name="input" id="userName">
+<br>
+<span class="info">登录密码：</span>
+<input type="password" name="input" id="psw">
+<br>
+<span class="info">确认密码：</span>
+<input type="password" name="input" id="pswCheck">
+<br>
+<span class="info">姓名：</span>
+<input type="text" name="input" id="name">
+<br>
+<span class="info">性别：</span>
+<select name="" id="sex">
+<option value="男">男</option>
+<option value="女">女</option>
+</select>
+<br>
+<span class="info">身份证号码：</span>
+<input type="text" name="input" id="idNum">
+<br>
+<span class="info">邮箱：</span>
+<input type="text" name="input" id="email">
+<br>
+<span class="info">手机号码：</span>
+<input type="text" name="input" id="phoneNum">
+<br>
+<input type="button" value="提交" id="submit">
+</div>
+</section>
+</body>
+<script>
+// 表单验证
+(function () {
+var form = document.getElementById('form')
+var submit = document.getElementById('submit')
+// 表单对象
+var formList = {
+userName: document.getElementById('userName'),
+psw: document.getElementById('psw'),
+pswCheck: document.getElementById('pswCheck'),
+name: document.getElementById('name'),
+idNum: document.getElementById('idNum'),
+email: document.getElementById('email'),
+phoneNum: document.getElementById('phoneNum')
+}
+// 正则对象，属性名为id，属性值为数组，内容分别正则表达式、错误提示信息、默认布尔值（做正则验证结果判断）。
+var regExpList = {
+userName: ['^[a-zA-Z]\\w{5,19}$', '6-20位字母、数字或“_”,字母开头', false],
+psw: ['[^\\s]{6,18}$', '6-18位，包括数字字母或符号，中间不能有空格', false],
+pswCheck: ['[^\\s]{6,18}$', '密码不正确', false],
+name: ['^[\\u4e00-\\u9fa5]{2,4}$', '两位到四位的中文汉字', false],
+idNum: ['^\\d{15}|\\d{18}|\\d{17}x$', '15位或者18位的数字，18位最后一位可以是x', false],
+email: ['^(?:\\w+\\.)*\\w+@(?:\\w+\\.)+[a-zA-Z]{2,3}$', '正确格式：12323@qq.com', false],
+phoneNum: ['^1[3|4|5|8][0-9]\\d{8}$', '11位手机号码', false]
+}
+
+// 触发失焦后，为对应表单元素添加提示信息元素
+function append(e, bool, ele) {
+var curTarget=ele ? ele : e.target
+var pre = ele ? ele.previousElementSibling : e.target.previousElementSibling
+var host = document.createElement('span')
+
+// 如果已经存在提示元素，先删除
+if (pre.children[0]) {
+pre.removeChild(pre.children[0])
+}
+
+// 根据正则返回结果输出对应文本和样式，改变对应正则对象属性布尔值
+if (bool === true) {
+host.innerHTML = 'OK'
+host.className = 'ok'
+regExpList[curTarget.id][2] = true
+} else {
+host.innerHTML = regExpList[curTarget.id][1]
+host.className = 'warn'
+regExpList[curTarget.id][2] = false
+}
+
+pre.appendChild(host)
+}
+
+// 两个密码表单元素失焦后，都会检查文本的一致性并更改提示信息
+function pswCheckUp(e) {
+if (formList.pswCheck.value === formList.psw.value && regExpList.psw[2]) {
+append(e, true, formList.pswCheck)
+} else {
+append(e, false, formList.pswCheck)
+}
+}
+
+// 事件委托，为每个表单元素添加失焦事件
+form.addEventListener('focusout', function (e) {
+if (e.target.name === 'input') {
+var pattern = new RegExp(regExpList[e.target.id][0], 'gi')
+if(!(e.target.id === 'pswCheck')){
+append(e, pattern.test(e.target.value))
+}
+
+// 登录密码表单失焦后，也判断密码验证，使两者提示信息同步变更
+if (e.target.id === 'psw' && formList.pswCheck.value) {
+pswCheckUp(e)
+} else if (e.target.id === 'pswCheck') {
+return pswCheckUp(e)
+}
+}
+})
+
+// 提交按钮点击事件，如果正则对象每个属性的布尔值都为true，则验证成功。如果存在false，便将对应id元素手动触发失焦，显示对应提示信息
+submit.addEventListener('click', function () {
+var countResult = 0
+for (i in regExpList) {
+if (!regExpList[i][2]) {
+formList[i].focus()
+formList[i].blur()
+// alert('验证失败')
+} else {
+countResult++
+}
+}
+if (countResult === 7) {
+return alert('验证成功')
+}
+})
+
+})()
+</script>
+
+</html>

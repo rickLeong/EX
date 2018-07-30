@@ -66,12 +66,11 @@ a{
     position:relative;
     margin-top: 10px;
     margin-right: 25px;
-
 }
 #header_rightArea .search input{
     height: 40px;
     width: 260px;
-    padding: 0 10px;
+    padding: 0 15px;
     background-color: #010101;
     border: none;
     border-bottom:1px solid #616667;
@@ -111,13 +110,13 @@ a{
 .tool a:hover{
     background-color: #363c41;
 }
-.tool .cart,
+.tool .cart-icon,
 .tool .alarm{
     width: 22px;
     height: 22px;
     margin-top: 19px;
 }
-.tool .cart{
+.tool .cart-icon{
     background: url("../img/shopcar.png") no-repeat;
     background-position: 2px -213px;
 }
@@ -137,7 +136,6 @@ a{
 
 .wrap{
     width: 100%;
-    position: relative;
     min-height:750px;
 }
 /*banner區域*/
@@ -150,9 +148,9 @@ a{
 /*結算區域*/
 .cart{
     width: 1100px;
-    position: absolute;
+    position: relative;
     margin: 0 auto;
-    top:100px;
+    top:-60px;
     left: 50%;
     margin-left: -550px;
 }
