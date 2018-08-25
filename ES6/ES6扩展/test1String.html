@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // const xiaoming = {
+    //     name: 'xiaoming',
+    //     age: 14,
+    //     say: function() {
+    //         console.log(`My name is Mr.${this.name},and I'm ${this.age} years old`);
+    //     }
+    // }
+
+    // xiaoming.say();
+    
+    const getImoocCourseList = function() {
+    	return {
+    		status:true,
+    		msg:'success',
+    		data:[{
+    			id:1,
+    			title:'Vue Beginner',
+    			data:'xxxx-01-09'
+    		},{
+    			id:2,
+    			title:'ES6 Beginner',
+    			data:'xxxx-01-10'
+    		},{
+    			id:3,
+    			title:'React Beginner',
+    			data:'xxxx-01-11'
+    		}]
+    	}
+    };
+
+    const {data:listData, status, msg} = getImoocCourseList();
+
+    if(status){
+    	let arr = [];
+    	listData.forEach(function({data,title}){
+    		// arr.push(
+    		// 	'<li>\
+    		// 		<span>' + title + '</span>'+
+    		// 		'<span>' + data + '</span>'+
+    		// 	'</li>' 
+    		// );
+
+    		arr.push(
+    			`
+    			<li>
+    				<span>${title}</span>
+    				<span>${data}</span>
+    			</li>
+    			`
+    		);
+
+    	});
+
+    	let ul = document.createElement('ul');
+    	ul.innerHTML = arr.join('');
+    	document.body.appendChild(ul)
+    }else{
+    	alert(msg)
+    }
+    </script>
+</body>
+
+</html>

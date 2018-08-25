@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+	    div{
+	        width:50px;
+	        height:50px;
+	        position:absolute;
+          left:50%;
+	    }
+	    .red{
+	        background-color:#F26945;
+	        top:100px;
+          margin-left: -25px;
+	    }
+	    .yellow{
+	        background-color:#FFC12E;
+          top:200px;
+          margin-left: -125px;
+	    }
+	    .blue{
+	        background-color:#2FADEF;
+          top:300px;
+          margin-left: -25px;
+	    }
+	    .green{
+	        background-color:#8FC12C;
+          top: 200px;
+          margin-left: 75px;
+	    }
+
+	</style>
+</head>
+<body>
+	<div class="red"></div>
+	<div class="yellow"></div>
+	<div class="blue"></div>
+	<div class="green"></div>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script>
+    // $('div').animate({
+    //   opacity:'0.6',
+    //   borderRadius:'50%'
+    // },3000);
+
+  $('div').queue('anime',function(next){
+    $('.red').animate({
+        top:'+=150',
+        opacity:'0.6',
+        borderRadius:'50%'
+    },1000,function(){
+
+    });
+    $('.green').animate({
+        left:'-=150',
+        opacity:'0.6',
+        borderRadius:'50%'
+    },1000);
+    $('.yellow').animate({
+        left:'+=150',
+        opacity:'0.6',
+        borderRadius:'50%'
+    },1000);
+    $('.blue').animate({
+        top:'-=150',
+        opacity:'0.6',
+        borderRadius:'50%'
+    },1000);
+    next();
+  }).queue('anime',function(){
+    $('.red').animate({
+        top:'-=150',
+        opacity:'1',
+        borderRadius:'0%'
+    },500);
+    $('.green').animate({
+        left:'+=150',
+        opacity:'1',
+        borderRadius:'0%'
+    },500);
+    $('.yellow').animate({
+        left:'-=150',
+        opacity:'1',
+        borderRadius:'0%'
+    },500);
+    $('.blue').animate({
+        top:'+=150',
+        opacity:'1',
+        borderRadius:'0%'
+    },500);
+  })
+  setInterval(function(){
+      $('div').dequeue('anime');
+  },1500)
+
+
+  </script>
+</body>
+</html>

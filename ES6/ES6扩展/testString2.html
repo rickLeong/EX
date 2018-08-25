@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>模版字符串</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+    <script type="text/javascript">
+    const tmpl = function() {
+        return {
+            title: "前端",
+            data: [{
+                title: '布局基础',
+                date: ["html", "css"]
+            }, {
+                title: '网页特效',
+                date: ["javascript", "jquery"]
+            }, {
+                title: '框架',
+                date: ["bootstrap", "vue"]
+            }]
+        }
+    }
+    // 补充代码
+    let {title:capitonTitle,data:dataList} = tmpl();
+    let arr = [];
+    arr.push(`<caption><b>${capitonTitle}</b></caption>`)
+    dataList.forEach(function({title,date}){
+        let html = `<tr><td>${title}</td>`;
+        for(let i = 0;i<date.length;i++){
+            html += `<td>${date[i]}</td>`;
+        }
+        html += `<tr>`;
+        arr.push(html);
+    });
+    
+    let table = document.createElement('table');
+    table.border = 1;
+    table.innerHTML = arr.join('');
+    document.body.appendChild(table);
+
+    console.log(new Array(4).join('dasfdf'));
+    </script>
+</body>
+</html>

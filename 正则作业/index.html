@@ -1,96 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header id="header">
+   
+<body>   
+    <header id="header"> 
         <div class="content cf">
-            <div class="logo"><img src="img/logo.png" alt="logo"><h1 class="title">慕课高铁客户服务中心</h1><span class="subTitle">客户服务</span></div>
+            <div class="logo"><img src="img/logo.png" alt="logo">
+                <h1 class="title">慕课高铁客户服务中心</h1><span class="subTitle">客户服务</span></div>
             <ul class="nav">
                 <li>意见反馈 <span class="orange email">imooc@com</span></li>
                 <li>你好，请<a href="#" class="orange login">登录</a>|<span class="register">注册</span></li>
-                <li class="myImooc">我的IMOOC</li>
+                <li class="myImooc" id="dropdown">
+                    我的IMOOC
+                    <ul id="dropdownMenu" class="hide"> 
+                        <li>未完成订单</li>
+                        <li class="dashline">已完成订单(改/退)</li>
+                        <li class="dashline">我的保险</li>
+                        <li>查看个人信息</li>
+                        <li class="dashline">账户安全</li>
+                        <li class="dashline">常用联系人</li>
+                        <li>重点旅客预约</li>
+                        <li class="dashline">遗失物品查找</li>
+                        <li class="dashline">服务查询</li>
+                        <li>投诉</li>
+                        <li>建议</li>
+                    </ul>
+                </li>
                 <li class="phone"><img src="img/phone.png">手机版</li>
             </ul>
         </div>
     </header>
-
-    <div id="main" >
-        <p class="position content"><span class="positionText">您现在的位置: </span><a href="#" class="homepage">客运首页</a>  <span class="currentPosition"> > 注册</span></p>
+    <div id="main">
+        <p class="position content"><span class="positionText">您现在的位置: </span><a href="#" class="homepage">客运首页</a> <span class="currentPosition"> > 注册</span></p>
         <div class="content" id="form">
             <div class="formTitle">账户信息</div>
             <div id="regForm">
-              <div class="regFormInfo cf">
-                <div class="left"><label for="userName"><span class="orange">* </span>用<span class="threeL">户</span>名 :</label></div>
-                <div class="right"><input type="text" placeholder="用户名设置成功不可修改" id="userName"></div>
-                <span class="msg orange">6-30位字母、数字或"_",字母开头</span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="psw"><span class="orange">* </span>登录密码 :</label></div>
-                <div class="right">
-                  <input type="password" placeholder="6-20位字母、数字或符号" id="psw">
-                  <p class="errorMsg"></p>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="userName"><span class="orange">* </span>用<span class="threeL">户</span>名 :</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="用户名设置成功不可修改" id="userName">
+                    </div>
+                    <span class="msg orange">6-30位字母、数字或"_",字母开头</span>
                 </div>
-                <span class="pswLevel level1"></span>
-                <span class="pswLevel"></span>
-                <span class="pswLevel"></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="pswConfirm"><span class="orange">* </span>确认密码 :</label></div>
-                <div class="right"><input type="text" placeholder="再次输入您的登录密码" id="pswConfirm"></div>
-                <span class="msg"></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="cnName"><span class="orange">* </span>姓<span class="twoL">名</span> :</label></div>
-                <div class="right"><input type="text" placeholder="请输入姓名" id="cnName"></div>
-                <span class="msg"><a href="javasricpt:;" class="orange"  id="nameRule">姓名填写规则</a></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="idType"><span class="orange">* </span>证件类型 :</label></div>
-                <div class="right">
-                  <select name="idType" id="idType">
-                    <option value="secondGen">二代身份证</option>
-                  </select></div>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="idNum"><span class="orange">* </span>证件号码 :</label></div>
-                <div class="right"><input type="text" placeholder="请输入您的证件号码" id="idNum"></div>
-                <span class="msg"></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="email">邮<span class="twoL">箱</span> :</label></div>
-                <div class="right"><input type="text" placeholder="请正确填写邮箱地址" id="email" ></div>
-                <span class="msg"></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="telNum"><span class="orange">* </span>手机号码 :</label></div>
-                <div class="right"><input type="text" placeholder="请输入手机号码" id="telNum"></div>
-                <span class="msg"><span class="orange">请正确填写手机号码,稍后将向该手机号码发送短信验证码</span></span>
-              </div>
-              <div class="regFormInfo cf">
-                <div class="left"><label for="travelerType"><span class="orange">* </span>旅客类型 :</label></div>
-                <div class="right">
-                  <select id="travelerType">
-                    <option value="adult">成人</option>
-                    <option value="kid">儿童</option>
-                  </select>
-              </div>
-              </div>
-              <div class="rule"><p><input type="checkbox" id="agreed"> 我已阅读并同意遵守 <a href="#" class="ruleText">《中国铁路客户服务中心网站服务条款》</a></p></div>
-              <button id="submitBtn">下一步</button>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="psw"><span class="orange">* </span>登录密码 :</label>
+                    </div>
+                    <div class="right">
+                        <input type="password" placeholder="6-20位字母、数字或符号" id="psw">
+                        <p class="errorMsg"></p>
+                    </div>
+                    <span class="pswLevel level1"></span>
+                    <span class="pswLevel"></span>
+                    <span class="pswLevel"></span>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="pswConfirm"><span class="orange">* </span>确认密码 :</label>
+                    </div>
+                    <div class="right">
+                        <input type="password" placeholder="再次输入您的登录密码" id="pswConfirm">
+                    </div>
+                    <span class="msg"></span>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="cnName"><span class="orange">* </span>姓<span class="twoL">名</span> :</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="请输入姓名" id="cnName">
+                    </div>
+                    <div class="msg" id="nameRule">
+                        <a href="javasricpt:;" class="orange">姓名填写规则</a>
+                        <div id="nameRuleBox" class="hide">
+                            <p>1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</p>
+                            <p>2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉子的拼音或同音字重新修改后保存。</p>
+                            <p>3.姓名中有繁体字无法输入时，可用简体替代。</p>
+                            <p>4.姓名较长，汉字与英文字符合计超过30个（1个汉子算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不去别大小写。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="idType"><span class="orange">* </span>证件类型 :</label>
+                    </div>
+                    <div class="right">
+                        <select name="idType" id="idType">
+                            <option value="secondGen">二代身份证</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="idNum"><span class="orange">* </span>证件号码 :</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="请输入您的证件号码" id="idNum">
+                    </div>
+                    <span class="msg"></span>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="email">邮<span class="twoL">箱</span> :</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="请正确填写邮箱地址" id="email">
+                    </div>
+                    <span class="msg"></span>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="telNum"><span class="orange">* </span>手机号码 :</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" placeholder="请输入手机号码" id="telNum">
+                    </div>
+                    <span class="msg"><span class="orange">请正确填写手机号码,稍后将向该手机号码发送短信验证码</span></span>
+                </div>
+                <div class="regFormInfo cf">
+                    <div class="left">
+                        <label for="travelerType"><span class="orange">* </span>旅客类型 :</label>
+                    </div>
+                    <div class="right">
+                        <select id="travelerType">
+                            <option value="adult">成人</option>
+                            <option value="kid">儿童</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="rule">
+                    <p>
+                        <input type="checkbox" id="agreed"> 我已阅读并同意遵守 <a href="#" class="ruleText">《中国铁路客户服务中心网站服务条款》</a></p>
+                </div>
+                <button id="submitBtn">下一步</button>
             </div>
         </div>
     </div>
-
     <footer id="footer">
-      <div class="footerBox">
-        <div class="about">关于我们 | 网站声明</div>
-        <div class="copyRight">Copyright &copy; 2017 imooc.com ALL Rights Reserved | 京ICP备 13046642号-2</div>
-      </div>
+        <div class="footerBox">
+            <div class="about">关于我们 | 网站声明</div>
+            <div class="copyRight">Copyright &copy; 2017 imooc.com ALL Rights Reserved | 京ICP备 13046642号-2</div>
+        </div>
     </footer>
     <script src="js/function.js"></script>
 </body>
+
 </html>

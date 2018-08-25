@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>表单提交</title>
+</head>
+<body>
+  <button id="btn">获取数据</button>
+  <pre id="store"></pre>
+  <script>
+  var btn = document.getElementById('btn'),
+  	store = document.getElementById('store')
+
+  btn.addEventListener('click', ajax)
+
+  function ajax () {
+  	var src = 'data.json'
+
+    var xhr = new XMLHttpRequest()
+
+    xhr.open('GET', src)
+    xhr.onreadystatechange = loadData
+    xhr.responseType = 'json'
+    xhr.send()
+
+    function loadData () {
+      if (xhr.readyState === 4) {
+        //console.log(xhr)
+        store.innerHTML = JSON.stringify(xhr.response, null, 2)
+      }
+    }
+  }
+  </script>
+</body>
+</html>

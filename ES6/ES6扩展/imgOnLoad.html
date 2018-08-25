@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+
+</head>
+<body>
+	
+<script>
+	var img = new Image();
+		img.onload = function () {
+    	alert("image is loaded");
+ 	};
+	setTimeout(function(){
+			 	img.src = "http://image.imufu.cn/forum/201309/03/145652pv0hvl50kouizsvj.jpg";
+
+	},3000)
+ 
+
+ 	document.body.appendChild(img);
+</script>
+
+</body>
+</html>

@@ -1,23 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
-body{
+
+body {
     font-family: "Microsoft YaHei";
     position: relative;
 }
 
-.content{
-    width:1200px;
+.content {
+    width: 1200px;
     margin: 0 auto;
 }
 
@@ -28,58 +29,67 @@ body{
     border-bottom: 2px solid #2487e9;
 }
 
-#header .logo *{
+#header .logo * {
     float: left;
 }
-#header .logo img{
+
+#header .logo img {
     display: block;
     margin-top: 5px;
 }
-#header .logo .title{
+
+#header .logo .title {
     height: 30px;
-    margin:45px 0;
+    margin: 45px 0;
     line-height: 30px;
     font-size: 25px;
     border-right: 4px solid #000;
     padding-right: 10px;
 }
 
-#header .logo .subTitle{
-    height:20px;
+#header .logo .subTitle {
+    height: 20px;
     line-height: 20px;
     font-size: 18px;
-    color:#666;
-    margin:50px 10px;
+    color: #666;
+    margin: 50px 10px;
 }
 
 
-#header .nav{
+#header .nav {
     float: right;
 }
 
-#header .nav li{
+#header .nav li {
     float: left;
     margin-right: 15px;
     line-height: 25px;
 }
 
 
-#header .nav{
-    height:25px;
-    font-size:18px;
-    margin-top:50px;
+#header .nav {
+    height: 25px;
+    font-size: 18px;
+    margin-top: 50px;
 }
 
 #header .nav .login,
-#header .nav .register{
+#header .nav .register {
     padding: 0 5px;
 }
-#header .nav .myImooc{
-    position:relative;
-    padding-right:20px;
+
+#header .nav .myImooc {
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 8px;
 }
 
-#header .nav .myImooc::after{
+#header .nav .myImooc:hover {
+    color: #fb7403;
+    cursor: pointer;
+}
+
+#header .nav .myImooc::after {
     content: '';
     width: 0;
     height: 0;
@@ -88,32 +98,36 @@ body{
     border-left: 8px solid transparent;
     border-top: 8px solid #000;
     position: absolute;
-    right:0;
-    bottom: 0;
+    right: 0;
+    bottom: 8px;
 }
-#header .nav .phone img{
+
+#header .nav .phone img {
     width: 17px;
     height: 25px;
     vertical-align: middle;
     margin-right: 5px;
 }
-#header .nav .phone{
+
+#header .nav .phone {
     padding-left: 25px;
 }
 
 
-#main{
+#main {
     margin-top: 80px;
 }
 
-#main p.position *{
+#main p.position * {
     font-size: 18px;
     color: #666;
 }
-#main .position .positionText{
+
+#main .position .positionText {
     color: #000;
 }
-#form{
+
+#form {
     margin-top: 10px;
     width: 1200px;
     border: 1px solid #fb7403;
@@ -121,7 +135,8 @@ body{
     border-radius: 5px;
     padding-bottom: 80px
 }
-#form .formTitle{
+
+#form .formTitle {
     background: #fb7403;
     line-height: 45px;
     color: #fff;
@@ -130,117 +145,187 @@ body{
     border-radius: 5px;
 }
 
-#regForm{
-  width: 1200px;
-  margin-top: 50px
+#regForm {
+    width: 1200px;
+    margin-top: 50px
 }
 
-.regFormInfo{
-  margin-bottom: 20px;
+.regFormInfo {
+    margin-bottom: 20px;
 }
 
-.regFormInfo .left{
-  width: 450px;
-  float: left;
-  text-align: right;
+.regFormInfo .left {
+    width: 300px;
+    float: left;
+    text-align: right;
 }
-.regFormInfo .right{
-  width: 228px;
-  float: left;
-  margin:0 10px
+
+.regFormInfo .right {
+    width: 228px;
+    float: left;
+    margin: 0 10px
 }
+
 #nameRule {
-  text-decoration: underline;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 2px;
 }
-.pswLevel{
-  display: inline-block;
-  width: 40px;
-  height: 5px;
-  background-color: #ddd;
-  margin-bottom: 3px;
+
+#nameRule a {
+    text-decoration: underline;
 }
-.level1{
-  background-color: #ff0000;
+
+#nameRule #nameRuleBox {
+    width: 500px;
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    border: 1px solid #2487e9;
+    padding: 5px 20px;
+    background-color: #fff;
 }
-.level2{
-  background-color: #FFA500;
+
+#nameRule #nameRuleBox p {
+    line-height: 45px;
+    font-size: 14px;
+    color: #808080;
 }
-.level3{
-  background-color: #008000;
+
+.pswLevel {
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background-color: #ddd;
+    margin-bottom: 3px;
 }
+
+.level1 {
+    background-color: #ff0000;
+}
+
+.level2 {
+    background-color: #FFA500;
+}
+
+.level3 {
+    background-color: #008000;
+}
+
 .regFormInfo input,
-.regFormInfo select{
-  width:228px;
-  padding: 3px;
-}
-.threeL{
-  padding:0 8px;
-}
-.twoL{
-  padding-left: 32px;
-}
-.rule{
-  margin-left: 502px;
-}
-.rule .ruleText{
-  color:#006ee1;
+.regFormInfo select {
+    width: 228px;
+    padding: 3px;
 }
 
-#submitBtn{
-  color: #fff;
-  display: block;
-  background-color: #fb7403;
-  width: 230px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 5px;
-  margin-top: 50px;
-  margin-left: 525px;
-  border: none;
+.threeL {
+    padding: 0 8px;
+}
+
+.twoL {
+    padding-left: 32px;
+}
+
+.rule {
+    margin-left: 308px;
+}
+
+.rule .ruleText {
+    color: #006ee1;
+}
+
+#submitBtn {
+    color: #fff;
+    display: block;
+    background-color: #fb7403;
+    width: 230px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 340px;
+    border: none;
 }
 
 
 
-#footer{
-  width: 100%;
-  min-height: 100px;
-  margin-top: 120px;
-  text-align: center;
-  background-color: #dcdcdc;
-  color: #a99999;
-  border-top: 2px solid #2487e9;
-  position: fixed;
-  bottom: 0;
-}
-#footer .footer{
-  margin: 0 auto;
-  min-width: 1200px;
-}
-#footer .about{
-  margin-top: 30px;
+#footer {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 120px;
+    text-align: center;
+    background-color: #dcdcdc;
+    color: #a99999;
+    border-top: 2px solid #2487e9;
+    position: fixed;
+    bottom: 0;
 }
 
-#footer .copyRight{
-  margin-top: 10px;
+#footer .footer {
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+#footer .about {
+    margin-top: 30px;
+}
+
+#footer .copyRight {
+    margin-top: 10px;
 }
 
 
 .orange {
     color: #fb7403;
-
 }
 
 
-.cf::after{
-    content:'';
+.cf::after {
+    content: '';
     display: block;
     clear: both;
 }
 
-.errorMsg{
-  color: red;
+.errorMsg {
+    color: red;
 }
-.successMsg{
-  color: #008000;
+
+.successMsg {
+    color: #008000;
+}
+
+#header .nav .myImooc #dropdownMenu {
+    position: absolute;
+    background: #fcfcfc;
+    border: 1px solid #fb7403;
+    padding: 2px 20px;
+    margin-top: 8px;
+}
+
+#header .nav .myImooc #dropdownMenu li {
+    display: block;
+    width: 120px;
+    font-size: 14px;
+    color: #808080;
+    margin: 0 auto;
+    padding: 2px 3px;
+}
+
+#header .nav .myImooc #dropdownMenu li:hover {
+    cursor: pointer;
+    color: #fb7403;
+}
+
+#header .nav .myImooc #dropdownMenu li.dashline {
+    border-bottom: 1px dashed #808080;
+}
+
+.hide {
+    display: none;
+}
+
+.active {
+    display: block;
 }

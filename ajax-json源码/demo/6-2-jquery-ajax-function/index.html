@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Ajax</title>
+  <script src="../jquery.1.12.js"></script>
+</head>
+<body>
+  <button id="btn">获取数据</button>
+  <pre id="store"></pre>
+  <script>
+  var btn = $('#btn'),
+  	store = $('#store')
+
+  btn.on('click', ajax)
+
+  function ajax () {
+  	var src = './data.php'
+
+    $.ajax({
+      url: src,
+      type: 'GET',
+      dataType: 'json'
+    }).then(loadData, null)
+
+    function loadData (data) {
+      store.html(JSON.stringify(data, null, 2))
+    }
+  }
+  </script>
+</body>
+</html>
+  

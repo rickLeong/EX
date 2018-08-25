@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>XHR 对象</title>
+</head>
+<body>
+  <button id="btn">获取数据</button>
+  <pre id="store"></pre>
+  <script>
+  var btn = document.getElementById('btn'),
+  	store = document.getElementById('store')
+
+  btn.addEventListener('click', ajax)
+
+  function ajax () {
+  	var src = './delaydata.php'
+  	
+    var xhr = new XMLHttpRequest()
+
+    xhr.open('GET', src)
+    // xhr.open('GET', src, false)
+
+    xhr.onreadystatechange = loadData
+    xhr.responseType = 'json'
+    xhr.timeout = 1000
+    xhr.ontimeout = whenTimeout
+    xhr.send()
+
+    function loadData () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        store.innerHTML = JSON.stringify(xhr.response, null, 2)
+      }
+    }
+
+    function whenTimeout () {
+      console.log(xhr.readyState)
+      store.innerHTML = 'time over'
+    }
+  }
+  </script>
+</body>
+</html>
+  

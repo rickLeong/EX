@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Ajax</title>
+  <script src="../jquery.1.12.js"></script>
+</head>
+<body>
+  <button id="btn">获取数据</button>
+  <pre id="store"></pre>
+  <script>
+  var btn = $('#btn'),
+  	store = $('#store')
+
+  btn.on('click', ajax)
+
+  // jquery global ajax callbacks
+  $(document).ajaxComplete(function (e, xhr, setting) {
+    console.log(xhr, 'complete!')
+  })
+
+  $(document).ajaxError(function (e, xhr, setting) {
+    console.log(xhr, 'error!')
+  })
+
+  $(document).ajaxSend(function (e, xhr, setting) {
+    console.log(xhr, 'send!')
+  })
+
+  $(document).ajaxStart(function (e, xhr, setting) {
+    console.log(xhr, 'start!')
+  })
+
+  $(document).ajaxStop(function (e, xhr, setting) {
+    console.log(xhr, 'stop!')
+  })
+
+  $(document).ajaxSuccess(function (e, xhr, setting) {
+    console.log(xhr, 'success!')
+  })
+
+  function ajax () {
+  	var src = './data.php'
+  	
+    // var xhr = new XMLHttpRequest()
+
+    // xhr.open('GET', src)
+
+    // xhr.onreadystatechange = loadData
+    // xhr.responseType = 'json'
+    // xhr.send()
+    $.ajax({
+      url: src,
+      type: 'GET',
+      dataType: 'json',
+      success: loadData
+    })
+    
+    // function loadData () {
+    //   if (xhr.readyState === 4 && xhr.status === 200) {
+    //     store.innerHTML = JSON.stringify(xhr.response, null, 2)
+    //   }
+    // }
+
+    function loadData (data) {
+      store.html(JSON.stringify(data, null, 2))
+    }
+  }
+  </script>
+</body>
+</html>
+  

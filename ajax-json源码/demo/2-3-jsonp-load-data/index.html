@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>表单提交</title>
+</head>
+<body>
+  <button id="btn">获取数据</button>
+  <pre id="store"></pre>
+  <script>
+  var btn = document.getElementById('btn'),
+  	store = document.getElementById('store'),
+  	tempDOM = null
+
+  btn.addEventListener('click', getScript)
+
+  function getScript () {
+  	var src = 'data.js'
+  	tempDOM = document.createElement('script')
+  	document.body.appendChild(tempDOM)
+  	tempDOM.src = src
+  }
+
+  function loadData (data) {
+  	store.innerHTML = JSON.stringify(data, null, 2)
+  	document.body.removeChild(tempDOM)
+  }
+  </script>
+</body>
+</html>
+  

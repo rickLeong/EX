@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+</head>
+
+<body>
+    <!-- 顶部开始 -->
+    <header>
+        <div class="top_left">
+            <img src="../img/logo.png"><span class="three">慕课高铁客户服务中心</span><span class="four">客户服务</span>
+        </div>
+        <div class="top_right">
+            <span class="one">意见反馈</span><span class="tow">imooc@com</span>
+            <span class="one">您好,请</span><span class="tow2">登录</span><span class="one1">注册</span>
+            <span class="one3">
+<a href="#">我的IMOOC</a>
+<div class="top_text">
+<ul>
+<li>未完成订单</li>
+<li class="dotted">已完成订单(改/退)</li>
+<li class="dotted">我的保险</li>
+<li>查看个人信息</li>
+<li class="dotted">账户安全</li>
+<li class="dotted">常用联系人</li>
+<li>重点旅客预约</li>
+<li class="dotted">遗失物品查找</li>
+<li class="dotted">服务查询</li>
+<li>投诉</li>
+<li>建议</li>
+</ul>
+</div>
+</span>
+            <span class="triangle"></span>
+            <img src="../img/1.png"><span class="one2">手机版</span>
+        </div>
+    </header>
+    <!-- 顶部结束 -->
+    <!-- 表单区开始 -->
+    <section>
+        <div class="border">
+            <div class="wrap">
+                <span class="body_top1">您现在的位置:<a href="#">客运首页</a><a href="#">>注册</a></span>
+                <div class="form_top">账户信息</div>
+                <form>
+                    <!-- 用户名 -->
+                    <div class="form_body">
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">用 户 名 :</span>
+                            <input id="username" type="text" placeholder=" 用户名设置后不可修改">
+                            <label>6-30位字母、数字或'_' ,字母开头
+                            </label>
+                        </div>
+                        <!-- 登录密码 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">登录密码:</span>
+                            <input id="password" type="password" placeholder=" 6-20位字母,数字或符号">
+                            <div class="color_wrap"><span id="color1"></span><span id="color2"></span><span id="color3"></span></div>
+                            <label class="color_text"></label>
+                        </div>
+                        <!-- 确认密码 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">确认密码:</span>
+                            <input id="confirmPassword" type="password" placeholder=" 再次输入您的登录密码">
+                            <label></label>
+                        </div>
+                        <!-- 姓名 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名 :</span>
+                            <input id="name" type="text" placeholder=" 请输入姓名">
+                            <label></label>
+                            <div class="instructions">姓名填写规则
+                                <ul>
+                                    <li>1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。</li>
+                                    <li>2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉子的拼音或同音字重新修改后保存。</li>
+                                    <li>3.姓名中有繁体字无法输入时，可用简体替代。</li>
+                                    <li>4.姓名较长，汉字与英文字符合计超过30个（1个汉子算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不去别大小写</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 证件类型 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">证件类型:</span>
+                            <select>
+                                <option>一代身份证</option>
+                                <option>二代身份证</option>
+                            </select>
+                        </div>
+                        <!-- 证件号码 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">证件号码:</span>
+                            <input id="documentNumber" type="password" placeholder=" 请输入您的证件号码">
+                            <label></label>
+                        </div>
+                        <!-- 邮箱 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱 :</span>
+                            <input id="email" type="email" placeholder=" 请正确填写邮箱地址">
+                            <label></label>
+                        </div>
+                        <!-- 手机号码 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">手机号码:</span>
+                            <input id="telnumber" type="text" placeholder=" 请输入您的手机号码">
+                            <label>请正确填写手机号码,稍后将向手机号码发送短信验证码</label>
+                        </div>
+                        <!-- 游客类型 -->
+                        <div class="item">
+                            <span class="star">*</span>
+                            <span class="text">游客类型:</span>
+                            <select>
+                                <option>儿童</option>
+                                <option>成人</option>
+                            </select>
+                        </div>
+                        <!-- 单选框 -->
+                        <div class="agreed">
+                            <input type="checkbox" id="checkbox"><span>我已阅读并同意遵守<a href="#"><<中国铁路客户服务中心网站服务条款>></a></span>
+                        </div>
+                        <input type="submit" id="submit" value="下一步">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- 表单区结束 -->
+    <!-- 底部 -->
+    <footer>
+        <div class="end">
+            <div class="footer_top_text">关于我们 | 网站声明</div>
+            <p>Copyright @ 2017 imooc.com AllRights Reserved | 京ICp备13046642号-2</p>
+        </div>
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    Object.defineProperty(Object, 'freezPolyFill', {
+        value: function(obj) {
+            let i;
+            for (i in obj) {
+                if (obj.hasOwnProperty(i)) {
+                    if (typeof obj[i] === 'object') {
+                        return Object.freezPolyFill(obj[i]);
+                    }
+                    Object.defineProperty(obj, i, {
+                        writable: false
+                    })
+                }
+            }
+            Object.seal(obj);
+        }
+    })
+
+    const xiaoming = {
+        age: 14,
+        name: 'xiaoming',
+        hobby: {
+            basketball: true,
+            football: true
+        }
+    }
+
+    Object.freezPolyFill(xiaoming);
+    </script>
+</body>
+
+</html>

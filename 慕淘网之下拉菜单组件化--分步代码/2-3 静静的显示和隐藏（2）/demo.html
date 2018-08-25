@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/showHide.js"></script>
+  <title>Document</title>
+  <style>
+    body{
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    button{
+      width: 50%;
+      height: 30px
+    }
+    .box{
+      width: 100%;
+      background: red;
+      height:370px;
+    }
+  </style>
+</head>
+<body>
+  <button class="display">display</button><button class="hide">hide</button>
+  <div class="box"></div>
+  <script type="text/javascript">
+    $box = $('.box');
+    $('.display').on('click',function(){
+      silent.show($box);
+      
+    });
+    $('.hide').on('click',function(){
+      silent.hide($box);
+    });
+
+    $box.on('show shown hide hidden',function(e){
+      console.log($(this).data());
+    })
+  </script>
+</body>
+</html>

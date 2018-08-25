@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div>
+            <div class="title">自定义select</div>
+            <div class="select_box">
+                <span>未选择</span>
+                <span class="dropdown_button"><span class="arrow"></span></span>
+            </div>
+            <ul class="dropdown_box">
+                <li class="search_box_wrap">
+                    <input type="text" name="search" placeholder="搜索" autocomplete="off" class="search_box">
+                </li>
+                <li class="option_header">构建工具</li>
+                <li value="1" type="构建工具" class="option_item">Babel</li>
+                <li value="2" type="构建工具" class="option_item">Webpack</li>
+                <li value="3" type="构建工具" class="option_item">Rollup</li>
+                <li class="option_header">前端框架</li>
+                <li value="4" type="前端框架" class="option_item">Vue</li>
+                <li value="5" type="前端框架" class="option_item">Angular</li>
+                <li value="6" type="前端框架" class="option_item">React</li>
+                <li value="7" type="前端框架" class="option_item">Nerv</li>
+            </ul>
+        </div>
+        <div>
+            <p id="output"></p>
+        </div>
+        <div style="text-align: center;margin-top: 60px;">
+            <div class="title">原生select</div>
+            <select>
+                <option value="1" type="构建工具" class="original_option_item">Babel</option>
+                <option value="2" type="构建工具" class="original_option_item">Webpack</option>
+                <option value="3" type="构建工具" class="original_option_item">Rollup</option>
+                <option value="4" type="前端框架" class="original_option_item">Vue</option>
+                <option value="5" type="前端框架" class="original_option_item">Angular</option>
+                <option value="6" type="前端框架" class="original_option_item">React</option>
+                <option value="7" type="前端框架" class="original_option_item">Nerv</option>
+            </select>
+        </div>
+    </div>
+    <script type="text/javascript" src="asset/js/script.js"></script>
+</body>
+
+</html>

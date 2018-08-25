@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<script type="text/javascript">
+//补充代码
+let node = {
+    type:"Identifier",
+    name:"ES",
+    loc:{
+        start:["line","column"],
+        end:{
+            line:1,
+            column:4
+        }
+    }
+}
+
+let {loc : { start: [line, ,foo=2] },loc:{end:{line:ln}} } = node
+    </script>
+</body>
+</html>
